@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlassMapperWalkthrough.Web", "GlassMapperWalkthrough.Web\GlassMapperWalkthrough.Web.csproj", "{56C1A204-1C59-42FB-9934-4CD5B1A95DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlassMapperWalkthrough.Domain", "GlassMapperWalkthrough.Domain\GlassMapperWalkthrough.Domain.csproj", "{59040CB1-CBDC-43DC-BEEE-56565405DA5D}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "GlassMapperWalkthrough.TDS.Master", "GlassMapperWalkthrough.TDS.Master\GlassMapperWalkthrough.TDS.Master.scproj", "{278775D9-12B1-404E-89E0-F699FB889D01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tds", ".tds", "{1E7C9682-017C-4D27-920B-7554E05ADED1}"
+	ProjectSection(SolutionItems) = preProject
+		TdsGlobal.config = TdsGlobal.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlassMapperWalkthrough.Web.Tests", "GlassMapperWalkthrough.Web.Tests\GlassMapperWalkthrough.Web.Tests.csproj", "{5CA5D237-0E85-4C5F-BFE8-603921B82EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlassMapperWalkthrough.IoC", "GlassMapperWalkthrough.IoC\GlassMapperWalkthrough.IoC.csproj", "{35EA6742-F93B-46AC-B166-ECC5435E2FDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56C1A204-1C59-42FB-9934-4CD5B1A95DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C1A204-1C59-42FB-9934-4CD5B1A95DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C1A204-1C59-42FB-9934-4CD5B1A95DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C1A204-1C59-42FB-9934-4CD5B1A95DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59040CB1-CBDC-43DC-BEEE-56565405DA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59040CB1-CBDC-43DC-BEEE-56565405DA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59040CB1-CBDC-43DC-BEEE-56565405DA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59040CB1-CBDC-43DC-BEEE-56565405DA5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278775D9-12B1-404E-89E0-F699FB889D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278775D9-12B1-404E-89E0-F699FB889D01}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{278775D9-12B1-404E-89E0-F699FB889D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278775D9-12B1-404E-89E0-F699FB889D01}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5CA5D237-0E85-4C5F-BFE8-603921B82EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA5D237-0E85-4C5F-BFE8-603921B82EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA5D237-0E85-4C5F-BFE8-603921B82EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA5D237-0E85-4C5F-BFE8-603921B82EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35EA6742-F93B-46AC-B166-ECC5435E2FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35EA6742-F93B-46AC-B166-ECC5435E2FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35EA6742-F93B-46AC-B166-ECC5435E2FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35EA6742-F93B-46AC-B166-ECC5435E2FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

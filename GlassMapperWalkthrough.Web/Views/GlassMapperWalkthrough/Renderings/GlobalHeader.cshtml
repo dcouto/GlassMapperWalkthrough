@@ -1,0 +1,85 @@
+﻿@using Glass.Mapper
+@using GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Folders
+@using GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<GlassMapperWalkthrough.Web.Models.GlobalHeaderViewModel>
+
+<!-- Navigation bar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            @if (Model.Site != null)
+            {
+                if (Model.Site.Logo_Link.Url.HasValue())
+                {
+                    using(BeginRenderLink(i => i.Site.Logo_Link, new {@class = "navbar-brand"}))
+                    {
+                        @Editable(i => i.Site.Logo)
+                    }
+                }
+                else
+                {
+                    @Editable(i => i.Site.Logo)
+                }
+            }
+        </div>
+        <nav role="navigation" class="collapse navbar-collapse navbar-right">
+            <ul class="navbar-nav nav">
+
+                @foreach (var item in Model.Header.GetMainNavigationLinks().ToList())
+                {
+                    var subNavItems = item.Children.OfType<IText_Link>().ToList();
+
+                    var hasSubNavItems = subNavItems.Count > 0;
+                    var cssClassDropdown = hasSubNavItems ? "dropdown" : "";
+
+                    var isActive = item.Link.Url == Request.Url.AbsolutePath;
+                    var cssClassActive = isActive ? "active" : "";
+
+                    <li class="@cssClassDropdown @cssClassActive">
+                        @if (hasSubNavItems)
+                        {
+                            using (BeginRenderLink(item, i => i.Link, new { @class = "dropdown-toggle", @data_toggle = "dropdown" }))
+                            {
+                                @Editable(item, i => i.Title) <b class="caret"></b>
+                            }
+
+                            <ul class="dropdown-menu">
+                                @foreach (var subNav in subNavItems)
+                                {
+                                    <li>
+                                        @using (BeginRenderLink(subNav, i => i.Link))
+                                        {
+                                            @Editable(subNav, i => i.Title)
+                                        }
+                                    </li>
+                                }
+
+                                <li class="divider"></li>
+                                <li>
+                                    @using (BeginRenderLink(item, i => i.Link))
+                                    {
+                                        @Editable(item, i => i.Title)
+                                    }
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            using (BeginRenderLink(item, i => i.Link))
+                            {
+                                @Editable(item, i => i.Title)
+                            }
+                        }
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div><!-- End Navigation bar -->

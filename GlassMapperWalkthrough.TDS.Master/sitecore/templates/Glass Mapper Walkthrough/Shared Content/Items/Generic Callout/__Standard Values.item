@@ -1,0 +1,98 @@
+----item----
+version: 1
+id: {913492D8-3605-4F0A-A1AB-D2C57675C2B8}
+database: master
+path: /sitecore/templates/Glass Mapper Walkthrough/Shared Content/Items/Generic Callout/__Standard Values
+parent: {454424E1-684D-4AD9-8F2A-8FF070E21EAB}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {454424E1-684D-4AD9-8F2A-8FF070E21EAB}
+templatekey: Generic Callout
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 0
+
+
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: d89f5987-cc35-46fc-aa23-4d672c3d5639
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140721T161156
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d89f5987-cc35-46fc-aa23-4d672c3d5639
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20141002T135445:635478548859829803
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 2
+revision: aa67ef4d-4d8a-4ebb-b00c-de7ce1742a7b
+
+----field----
+field: {1D57731F-CC1B-4DC8-8A8E-557D9AEDEC6A}
+name: Headline
+key: headline
+content-length: 5
+
+$name
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140721T161156
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+aa67ef4d-4d8a-4ebb-b00c-de7ce1742a7b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20150225T171456:635604812961353068
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
