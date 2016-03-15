@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {89377111-781C-4171-8191-30AACE95A621}
+database: master
+path: /sitecore/content/Glass Mapper Walkthrough/Shared Content/Carousels/Carousels/Carousel 1
+parent: {2F28F6F6-9885-470E-AE23-80A20DE04B82}
+name: Carousel 1
+master: {00000000-0000-0000-0000-000000000000}
+template: {EB19541A-C21B-46BA-8BA2-6A4626D748B3}
+templatekey: Carousel
+
+----version----
+language: en
+version: 1
+revision: 51172772-0d31-47be-9684-1714b7e30814
+
+----field----
+field: {20B05D58-DB54-4F57-A82C-838F7A2DB739}
+name: Slides
+key: slides
+content-length: 116
+
+{D3CF7195-1603-460A-9473-5E7C44D95BDE}|{0BE59B1D-060B-474F-9AE5-494F40F2CB23}|{7E1C78F6-A29D-4A42-98FE-1EF01AA17AF5}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160312T195812Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+51172772-0d31-47be-9684-1714b7e30814
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160312T195903Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

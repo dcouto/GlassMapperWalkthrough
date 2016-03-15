@@ -386,6 +386,47 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 
 
 }
+namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Rendering_Parameters
+{
+
+
+ 	/// <summary>
+	/// ICarousel_Rendering_Parameters Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Glass Mapper Walkthrough/Rendering Parameters/Carousel Rendering Parameters</para>	
+	/// <para>ID: 4cf49975-a454-43c6-9134-40b3a3dc15ef</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=ICarousel_Rendering_Parameters_Constants.TemplateIdString )] //, Cachable = true
+	public partial interface ICarousel_Rendering_Parameters : IGlassBase 
+	{
+			
+					/// <summary>
+			/// The Display Previous And Next Buttons field.
+			/// <para></para>
+			/// <para>Field Type: Checkbox</para>		
+			/// <para>Field ID: fa429c8e-8176-4baa-a71c-551d28d1b93d</para>
+			/// <para>Custom Data: </para>
+			/// </summary>
+										[SitecoreField(ICarousel_Rendering_Parameters_Constants.Display_Previous_And_Next_Buttons_FieldName)]
+						bool Display_Previous_And_Next_Buttons  { get; set; }
+				}
+
+	public static partial class ICarousel_Rendering_Parameters_Constants{
+
+			public const string TemplateIdString = "4cf49975-a454-43c6-9134-40b3a3dc15ef";
+			public static readonly Guid TemplateId = new Guid(TemplateIdString);
+			public const string TemplateName = "Carousel Rendering Parameters";
+
+					
+			public static readonly Guid Display_Previous_And_Next_Buttons_FieldId = new Guid("fa429c8e-8176-4baa-a71c-551d28d1b93d");
+			public const string Display_Previous_And_Next_Buttons_FieldName = "Display Previous And Next Buttons";
+			
+			
+
+	}
+
+
+}
 namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items
 {
 

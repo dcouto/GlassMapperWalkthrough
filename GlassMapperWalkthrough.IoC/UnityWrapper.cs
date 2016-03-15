@@ -23,7 +23,8 @@ namespace GlassMapperWalkthrough.IoC
                 // so if you pass in a new InjectionConstructor() and specify an empty constructor,
                 // this tells Unity to target the parameterless constructor of the registering type
                 .RegisterType<ISitecoreContext, SitecoreContext>(new InjectionConstructor())
-                .RegisterType<IRenderingContext, RenderingContextMvcWrapper>();
+                .RegisterType<IRenderingContext, RenderingContextMvcWrapper>()
+                .RegisterType<IGlassHtml, GlassHtml>();
         }
 
         public static IUnityContainer GetContainer()

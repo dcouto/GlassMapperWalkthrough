@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {3223B04B-010B-4CA5-B240-523DA4827B68}
+database: master
+path: /sitecore/content/Glass Mapper Walkthrough/Shared Content/Header
+parent: {1B61D231-6CBB-484A-B7E7-43D5FE453584}
+name: Header
+master: {00000000-0000-0000-0000-000000000000}
+template: {28890E72-FFBF-4E36-B3DB-1215381A3CF3}
+templatekey: Header Folder
+
+----version----
+language: en
+version: 1
+revision: c3bec9b2-7473-49c6-b202-1e57973aac2f
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160312T195916Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c3bec9b2-7473-49c6-b202-1e57973aac2f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160312T195916Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

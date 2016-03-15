@@ -1,81 +1,28 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Glass.Mapper;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web;
-using Glass.Mapper.Sc.Web.Mvc;
 using GlassMapperWalkthrough.Domain.Models;
-using Sitecore.Data.Items;
 
 namespace GlassMapperWalkthrough.Web.Controllers
 {
-    //public interface IGlassController<T> where T : class
-    //{
-    //    T Layout { get; }
-    //    T DataSource { get; }
-    //    T Context { get; }
-    //    ISitecoreContext SitecoreContext { get; set; }
-    //    IGlassHtml GlassHtml { get; set; }
-    //    IRenderingContext RenderingContextWrapper { get; set; }
-
-    //    /// <summary>
-    //    /// Returns either the item specified by the DataSource or the current context item
-    //    /// </summary>
-    //    /// <value>The layout item.</value>
-    //    // Helper property not to be tested       
-    //    Item LayoutItem { get; }
-
-    //    /// <summary>
-    //    /// Returns either the item specified by the current context item
-    //    /// </summary>
-    //    /// <value>The layout item.</value>
-    //    // Helper property not to be tested
-    //    Item ContextItem { get; }
-
-    //    /// <summary>
-    //    /// Returns the item specificed by the data source only. Returns null if no datasource set
-    //    /// </summary>
-    //    // Helper property not to be tested
-    //    Item DataSourceItem { get; }
-
-    //    System.Web.Mvc.ActionResult Index();
-    //}
-
     public class BaseController<T> : Controller where T : class, IGlassBase
     {
         protected readonly ISitecoreContext SitecoreContext;
-        protected IRenderingContext RenderingContext;
-        
-        //private readonly IGlassController<T> _glassController;
+        protected readonly IRenderingContext RenderingContext;
 
-        public BaseController(ISitecoreContext sitecoreContext, IRenderingContext renderingContext)
+        protected BaseController(ISitecoreContext sitecoreContext, IRenderingContext renderingContext)
         {
             SitecoreContext = sitecoreContext;
             RenderingContext = renderingContext;
-
-            //_glassController = new GlassController<T>();
         }
-
-        //public BaseController(
-        //    ISitecoreContext sitecoreContext,
-        //    IGlassHtml glassHtml,
-        //    IRenderingContext renderingContext,
-        //    HttpContextBase httpContextBase)
-        //{
-        //    SitecoreContext = sitecoreContext;
-        //    //_glassController = new GlassController<T>(sitecoreContext, glassHtml, renderingContext, httpContextBase);
-        //}
-
-        //public bool HasDataSource
-        //{
-        //    get { return _glassController.RenderingContextWrapper.HasDataSource; }
-        //}
 
         private T _computedDataSourceItem;
 
         /// <summary>
         /// Returns the DataSourceItem casted to T if it's set, otherwise, returns the ContextItem casted to T
         /// </summary>
-        public T ComputedDataSourceItem
+        protected T ComputedDataSourceItem
         {
             get
             {
@@ -94,11 +41,38 @@ namespace GlassMapperWalkthrough.Web.Controllers
                     {
                         _computedDataSourceItem = SitecoreContext.GetCurrentItem<T>();
                     }
-
-                    //_computedDataSourceItem = SitecoreContext.Cast<T>(RenderingContext.HasDataSource ? _glassController.ContextItem);
                 }
 
                 return _computedDataSourceItem;
+            }
+        }
+    }
+
+    public class BaseController<TDataSource, TRenderingParameters> : BaseController<TDataSource> where TDataSource : class, IGlassBase where TRenderingParameters : class, IGlassBase
+    {
+        private readonly IGlassHtml GlassHtml;
+
+        protected BaseController(ISitecoreContext sitecoreContext, IRenderingContext renderingContext, IGlassHtml glassHtml) : base(sitecoreContext, renderingContext)
+        {
+            GlassHtml = glassHtml;
+        }
+
+        private TRenderingParameters _renderingParameters;
+
+        protected TRenderingParameters RenderingParameters
+        {
+            get
+            {
+                if (_renderingParameters == null)
+                {
+                    var renderingParameters = RenderingContext.GetRenderingParameters();
+
+                    _renderingParameters = renderingParameters.HasValue()
+                        ? GlassHtml.GetRenderingParameters<TRenderingParameters>(renderingParameters)
+                        : null;
+                }
+
+                return _renderingParameters;
             }
         }
     }

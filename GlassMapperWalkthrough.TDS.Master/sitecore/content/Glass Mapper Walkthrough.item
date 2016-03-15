@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {75409093-9D0B-4A1F-A068-C772C451100F}
+database: master
+path: /sitecore/content/Glass Mapper Walkthrough
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Glass Mapper Walkthrough
+master: {00000000-0000-0000-0000-000000000000}
+template: {78E945BE-1F85-4BE2-B31E-016F262D28CF}
+templatekey: Site
+
+----version----
+language: en
+version: 1
+revision: 065df785-4b38-4db9-b0ea-b2874cd149f1
+
+----field----
+field: {699897FB-92A4-4B50-BFD3-F859D68247A5}
+name: Logo
+key: logo
+content-length: 10
+
+Yacht Club
+----field----
+field: {21ADDA31-7E4A-4338-A4DA-54B6932E6122}
+name: Logo Link
+key: logo link
+content-length: 123
+
+<link text="" linktype="internal" class="" title="" target="" querystring="" id="{9A6E6476-5BF3-4C10-BF87-FD061F8911D8}" />
+----field----
+field: {385E8C5A-6E98-4712-A1E8-527F5A19C4BE}
+name: Default Header
+key: default header
+content-length: 38
+
+{3223B04B-010B-4CA5-B240-523DA4827B68}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160312T162248Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+065df785-4b38-4db9-b0ea-b2874cd149f1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160312T200707Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

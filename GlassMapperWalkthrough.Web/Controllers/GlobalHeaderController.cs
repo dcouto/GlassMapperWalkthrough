@@ -13,15 +13,6 @@ namespace GlassMapperWalkthrough.Web.Controllers
         {
         }
 
-        //public GlobalHeaderController(
-        //    ISitecoreContext sitecoreContext, 
-        //    IGlassHtml glassHtml, 
-        //    IRenderingContext renderingContext, 
-        //    HttpContextBase httpContextBase)
-        //    : base(sitecoreContext, glassHtml, renderingContext, httpContextBase)
-        //{
-        //}
-
         public ActionResult Default()
         {
             var vm = new GlobalHeaderViewModel();
