@@ -1,46 +1,51 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<GlassMapperWalkthrough.Web.Models.CarouselViewModel>
 
-<!-- Slide gallery -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="col-xs-12">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="/includes/img/carousel1.jpg" alt="">
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="/includes/img/carousel2.jpg" alt="">
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="/includes/img/carousel3.jpg" alt="">
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                </div>
+@if (Model.CarouselSlides.Count > 0)
+{
+    <!-- Slide gallery -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-xs-12">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    @if (Model.CarouselSlides.Count > 1)
+                    {
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            @for (var i = 0; i < Model.CarouselSlides.Count; i++)
+                            {
+                                <li data-target="#carousel-example-generic" data-slide-to="@i" class="@(i == 0 ? "active" : "")"></li>
+                            }
+                        </ol>
+                    }
 
-                @if (Model.DisplayPreviousAndNextButtons)
-                {
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                }
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        @for (var i = 0; i < Model.CarouselSlides.Count; i++)
+                        {
+                            var slide = Model.CarouselSlides[i];
+
+                            <div class="item @(i == 0 ? "active" : "")">
+                                @Editable(slide, x => x.Image)
+
+                                <div class="carousel-caption">
+                                    @Editable(slide, x => x.Caption)
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    @if (Model.DisplayPreviousAndNextButtons)
+                    {
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    }
+                </div>
             </div>
-        </div>
-    </div><!-- End Slide gallery -->
-</div>
+        </div><!-- End Slide gallery -->
+    </div>
+}

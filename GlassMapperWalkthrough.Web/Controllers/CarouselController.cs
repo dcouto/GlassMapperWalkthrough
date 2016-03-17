@@ -13,7 +13,7 @@ namespace GlassMapperWalkthrough.Web.Controllers
         {
         }
 
-        public ActionResult Default()
+        public ActionResult Index()
         {
             var vm = new CarouselViewModel();
             
@@ -21,6 +21,11 @@ namespace GlassMapperWalkthrough.Web.Controllers
 
             if (renderingParameters != null)
                 vm.DisplayPreviousAndNextButtons = renderingParameters.Display_Previous_And_Next_Buttons;
+
+            if (RenderingContext.HasDataSource)
+            {
+                vm.CarouselSlides.AddRange(ComputedDataSourceItem.Slides);
+            }
 
             return View("~/Views/GlassMapperWalkthrough/Renderings/Carousel.cshtml", vm);
         }

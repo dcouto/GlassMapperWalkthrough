@@ -13,7 +13,7 @@ namespace GlassMapperWalkthrough.Web.Controllers
         {
         }
 
-        public ActionResult Default()
+        public ActionResult Index()
         {
             var vm = new GlobalHeaderViewModel();
 

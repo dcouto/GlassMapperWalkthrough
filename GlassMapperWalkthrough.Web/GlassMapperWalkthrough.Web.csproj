@@ -121,7 +121,9 @@
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BodyContentController.cs" />
     <Compile Include="Controllers\CarouselController.cs" />
+    <Compile Include="Controllers\GenericCalloutsListController.cs" />
     <Compile Include="Controllers\GlobalHeaderController.cs" />
     <Compile Include="Models\CarouselViewModel.cs" />
     <Compile Include="Models\GlobalHeaderViewModel.cs" />
@@ -188,6 +190,8 @@
     <Content Include="Views\GlassMapperWalkthrough\Layouts\Main.cshtml" />
     <Content Include="Views\GlassMapperWalkthrough\Renderings\GlobalHeader.cshtml" />
     <Content Include="Views\GlassMapperWalkthrough\Renderings\Carousel.cshtml" />
+    <Content Include="Views\GlassMapperWalkthrough\Renderings\BodyContent.cshtml" />
+    <Content Include="Views\GlassMapperWalkthrough\Renderings\GenericCalloutsList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Glass.Mapper;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web;
@@ -26,7 +27,7 @@ namespace GlassMapperWalkthrough.Web.Controllers
         {
             get
             {
-                if (_computedDataSourceItem == null)
+                if (_computedDataSourceItem == null || _computedDataSourceItem.Id == Guid.Empty)
                 {
                     if (RenderingContext.HasDataSource)
                     {
@@ -50,15 +51,18 @@ namespace GlassMapperWalkthrough.Web.Controllers
 
     public class BaseController<TDataSource, TRenderingParameters> : BaseController<TDataSource> where TDataSource : class, IGlassBase where TRenderingParameters : class, IGlassBase
     {
-        private readonly IGlassHtml GlassHtml;
+        private readonly IGlassHtml _glassHtml;
 
         protected BaseController(ISitecoreContext sitecoreContext, IRenderingContext renderingContext, IGlassHtml glassHtml) : base(sitecoreContext, renderingContext)
         {
-            GlassHtml = glassHtml;
+            _glassHtml = glassHtml;
         }
 
         private TRenderingParameters _renderingParameters;
 
+        /// <summary>
+        /// Returns the DataSourceItem casted to TRenderingParameters if it's set, otherwise, returns null
+        /// </summary>
         protected TRenderingParameters RenderingParameters
         {
             get
@@ -68,7 +72,7 @@ namespace GlassMapperWalkthrough.Web.Controllers
                     var renderingParameters = RenderingContext.GetRenderingParameters();
 
                     _renderingParameters = renderingParameters.HasValue()
-                        ? GlassHtml.GetRenderingParameters<TRenderingParameters>(renderingParameters)
+                        ? _glassHtml.GetRenderingParameters<TRenderingParameters>(renderingParameters)
                         : null;
                 }
 

@@ -442,6 +442,16 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 	{
 			
 					/// <summary>
+			/// The Caption field.
+			/// <para></para>
+			/// <para>Field Type: Single-Line Text</para>		
+			/// <para>Field ID: 52ea5647-4f4c-4e3c-9ffc-e913958b35f2</para>
+			/// <para>Custom Data: </para>
+			/// </summary>
+										[SitecoreField(ICarousel_Slide_Constants.Caption_FieldName)]
+						string Caption  { get; set; }
+					
+					/// <summary>
 			/// The Image field.
 			/// <para></para>
 			/// <para>Field Type: Image</para>		
@@ -458,6 +468,10 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 			public static readonly Guid TemplateId = new Guid(TemplateIdString);
 			public const string TemplateName = "Carousel Slide";
 
+					
+			public static readonly Guid Caption_FieldId = new Guid("52ea5647-4f4c-4e3c-9ffc-e913958b35f2");
+			public const string Caption_FieldName = "Caption";
+			
 					
 			public static readonly Guid Image_FieldId = new Guid("db18456c-c5b6-43ab-a56f-29efa480af63");
 			public const string Image_FieldName = "Image";
@@ -1459,10 +1473,10 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 			/// <para></para>
 			/// <para>Field Type: Treelist</para>		
 			/// <para>Field ID: 20b05d58-db54-4f57-a82c-838f7a2db739</para>
-			/// <para>Custom Data: </para>
+			/// <para>Custom Data: generic=GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items.ICarousel_Slide</para>
 			/// </summary>
-										[SitecoreField(ICarousel_Constants.Slides_FieldName)]
-						IEnumerable<Guid> Slides  { get; set; }
+							[SitecoreField(FieldName="Slides")]
+									IEnumerable<GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items.ICarousel_Slide> Slides  { get; set; }
 				}
 
 	public static partial class ICarousel_Constants{
