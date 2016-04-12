@@ -172,6 +172,10 @@
       <Project>{59040cb1-cbdc-43dc-beee-56565405da5d}</Project>
       <Name>GlassMapperWalkthrough.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GlassMapperWalkthrough.Framework\GlassMapperWalkthrough.Framework.csproj">
+      <Project>{8f1f44cc-ad5b-4565-9ee9-1633299168cf}</Project>
+      <Name>GlassMapperWalkthrough.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GlassMapperWalkthrough.IoC\GlassMapperWalkthrough.IoC.csproj">
       <Project>{35ea6742-f93b-46ac-b166-ecc5435e2fdc}</Project>
       <Name>GlassMapperWalkthrough.IoC</Name>

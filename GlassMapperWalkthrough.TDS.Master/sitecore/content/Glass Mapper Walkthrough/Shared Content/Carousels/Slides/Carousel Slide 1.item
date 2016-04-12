@@ -12,7 +12,7 @@ templatekey: Carousel Slide
 ----version----
 language: en
 version: 1
-revision: a2a3d747-707e-4fe4-95ac-dc55c5608833
+revision: aa6e9ac3-f78e-4cf1-b8ee-5f600c5c830b
 
 ----field----
 field: {DB18456C-C5B6-43AB-A56F-29EFA480AF63}
@@ -21,6 +21,13 @@ key: image
 content-length: 58
 
 <image mediaid="{15AECB22-9BA7-463A-8023-B1C78107AA0E}" />
+----field----
+field: {52EA5647-4F4C-4E3C-9FFC-E913958B35F2}
+name: Caption
+key: caption
+content-length: 21
+
+Yacht pointing right.
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a2a3d747-707e-4fe4-95ac-dc55c5608833
+aa6e9ac3-f78e-4cf1-b8ee-5f600c5c830b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160312T195742Z
+20160315T222216Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

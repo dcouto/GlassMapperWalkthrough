@@ -9,17 +9,10 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {2DFCC795-76A0-4467-9117-F50B63970008}
 templatekey: Generic Page
 
-----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 145
-
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{5D11E4E2-11EB-4F14-8B6B-5BB29AE57F39}" /></r>
 ----version----
 language: en
 version: 1
-revision: d364d890-c276-482b-a4a6-4c49bf8b403d
+revision: 3abeec03-1ac6-4a6e-9ae0-966bf9c065c8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -48,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d364d890-c276-482b-a4a6-4c49bf8b403d
+3abeec03-1ac6-4a6e-9ae0-966bf9c065c8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20150226T163821:635605655011628559
+20160324T010123Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

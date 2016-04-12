@@ -12,7 +12,7 @@ templatekey: Carousel Slide
 ----version----
 language: en
 version: 1
-revision: 9508b074-ab37-4650-9dd1-759354b96855
+revision: 91b52f69-e0a0-4d58-8f30-d9c52bc0ac3c
 
 ----field----
 field: {DB18456C-C5B6-43AB-A56F-29EFA480AF63}
@@ -21,6 +21,13 @@ key: image
 content-length: 58
 
 <image mediaid="{1C0B2BD4-36A9-48BE-B906-9D1D514E6133}" />
+----field----
+field: {52EA5647-4F4C-4E3C-9FFC-E913958B35F2}
+name: Caption
+key: caption
+content-length: 15
+
+Close-up photo.
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9508b074-ab37-4650-9dd1-759354b96855
+91b52f69-e0a0-4d58-8f30-d9c52bc0ac3c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160312T195754Z
+20160315T222132Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

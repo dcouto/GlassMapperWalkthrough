@@ -1,39 +1,44 @@
-﻿<!-- Thumbnails -->
+﻿@using GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items
+
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<IGeneric_Callout_List>
+
+<!-- Thumbnails -->
 <div class="container thumbs">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="/includes/img/pic1.jpg" alt="" class="img-responsive">
-            <div class="caption">
-                <h3 class="">Motor</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <div class="btn-toolbar text-center">
-                    <a href="#" role="button" class="btn btn-primary pull-right">Details</a>
+    @foreach (var callout in Model.Items)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                RenderImage
+                <br />
+                @RenderImage(callout, i => i.Image, new { @class = "test", Height = 100 }, isEditable: true)
+
+                <br />
+                <br />
+
+                Editable
+                <br/>
+                @Editable(callout, i => i.Image, new { @class = "test", Height = 100 })
+
+                <div class="caption">
+                    <h3 class="">@Editable(callout, i => i.Headline)</h3>
+
+                    @Editable(callout, i => i.Body_Content)
+
+                    <div class="btn-toolbar text-center">
+                        @*
+                        <!--Glass-->
+                        @using (BeginRenderLink(callout, i => i.Link, new { @role = "button", @class = "btn btn-primary pull-right" }, isEditable: true))
+                        {
+                            @Editable(callout, i => i.Link_Text, i => string.Format("{0} &gt;", i.Link_Text))
+                        }*@
+
+                        <!--Sitecore MVC-->
+                        @Html.Sitecore().BeginField(IGeneric_Callout_Constants.Link_FieldName, callout.SitecoreItem, new {@role = "button", @class = "btn btn-primary pull-right"})
+                        @Editable(callout, i => i.Link_Text, i => string.Format("{0} &gt;", i.Link_Text))
+                        @Html.Sitecore().EndField()
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="/includes/img/pic2.jpg" alt="" class="img-responsive">
-            <div class="caption">
-                <h3 class="">Luxury</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <div class="btn-toolbar text-center">
-                    <a href="#" role="button" class="btn btn-primary pull-right">Details</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="/includes/img/pic3.jpg" alt="" class="img-responsive">
-            <div class="caption">
-                <h3 class="">Sailboats</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <div class="btn-toolbar text-center">
-                    <a href="#" role="button" class="btn btn-primary pull-right">Details</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    }
 </div><!-- End Thumbnails -->

@@ -31,14 +31,14 @@ namespace GlassMapperWalkthrough.Web.Controllers
 
         public IHeader_Folder GetHeaderFolder(ISite site)
         {
-            if (RenderingContext.HasDataSource)
-            {
-                return ComputedDataSourceItem;
-            }
-
             if (site != null)
             {
                 return site.Default_Header;
+            }
+
+            if (RenderingContext.HasDataSource)
+            {
+                return ComputedDataSourceItem;
             }
 
             return null;

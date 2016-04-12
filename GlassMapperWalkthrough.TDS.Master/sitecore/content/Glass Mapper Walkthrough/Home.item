@@ -13,13 +13,13 @@ templatekey: Home Page
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
 key: __renderings
-content-length: 267
+content-length: 335
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{90FDE158-E66E-4C34-B117-2880A12866A6}" p:after="*[1=2]" s:ds="" s:id="{86D6C5DC-93E9-41E9-B2F3-ED09F96A7671}" s:par="Display Previous And Next Buttons=1" s:ph="Main" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DA35237C-F841-4D5F-923E-78785799E0F1}" s:ds="{89377111-781C-4171-8191-30AACE95A621}" s:par="Display Previous And Next Buttons=1" /><r uid="{6EE2A33F-EC04-4744-A29F-9362D09DB916}" s:ds="{25E297F6-D8CC-435A-9891-FFE70A899EF8}" s:par="" /></d></r>
 ----version----
 language: en
 version: 1
-revision: 6fe99fde-e612-4fc7-a7a1-e8f39728a7d3
+revision: 099e93a1-7f33-4342-9d7b-1c2ae1cfa7ab
 
 ----field----
 field: {AB02E860-C889-4490-8A5F-90959A1B4B17}
@@ -28,6 +28,15 @@ key: page title
 content-length: 4
 
 Home
+----field----
+field: {90BF8B70-3FFC-47E4-AF83-0068E07ACD23}
+name: Page Content
+key: page content
+content-length: 696
+
+            <h3 class="">Welcome</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p><p>adding some more text and hoping it will save in Sitecore.</p>
+
 ----field----
 field: {8C0B738B-8C1E-494C-92CF-0B9EB3C1D44D}
 name: Meta Title
@@ -55,14 +64,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6fe99fde-e612-4fc7-a7a1-e8f39728a7d3
+099e93a1-7f33-4342-9d7b-1c2ae1cfa7ab
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160315T202718Z
+20160324T010747Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -70,3 +79,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

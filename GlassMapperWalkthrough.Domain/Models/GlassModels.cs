@@ -22,6 +22,7 @@ using System.Text;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Fields;
+using Sitecore.Data.Items;
 using Sitecore.Globalization;
 
 
@@ -30,6 +31,9 @@ namespace GlassMapperWalkthrough.Domain.Models
 
 	public partial interface IGlassBase{
 		
+		[SitecoreItem]
+        Item SitecoreItem { get; set; }
+
 		[SitecoreId]
 		Guid Id{ get; set; }
 
@@ -96,6 +100,33 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 			public const string TemplateIdString = "1b3f58c5-e8fd-4926-a97a-c93b74e386fa";
 			public static readonly Guid TemplateId = new Guid(TemplateIdString);
 			public const string TemplateName = "Main Navigation Folder";
+
+			
+
+	}
+
+
+}
+namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Folders
+{
+
+
+ 	/// <summary>
+	/// IGeneric_Callouts_Lists_Folder Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Glass Mapper Walkthrough/Shared Content/Folders/Generic Callouts Lists Folder</para>	
+	/// <para>ID: 23a63759-ba16-4fa9-acd0-4991df55471e</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IGeneric_Callouts_Lists_Folder_Constants.TemplateIdString )] //, Cachable = true
+	public partial interface IGeneric_Callouts_Lists_Folder : IGlassBase , global::GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Folders.IFolder
+	{
+		}
+
+	public static partial class IGeneric_Callouts_Lists_Folder_Constants{
+
+			public const string TemplateIdString = "23a63759-ba16-4fa9-acd0-4991df55471e";
+			public static readonly Guid TemplateId = new Guid(TemplateIdString);
+			public const string TemplateName = "Generic Callouts Lists Folder";
 
 			
 
@@ -348,6 +379,16 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 						Image Image  { get; set; }
 					
 					/// <summary>
+			/// The Link Text field.
+			/// <para></para>
+			/// <para>Field Type: Single-Line Text</para>		
+			/// <para>Field ID: e8c658db-a2ac-4c4e-aa30-469593507e2c</para>
+			/// <para>Custom Data: </para>
+			/// </summary>
+										[SitecoreField(IGeneric_Callout_Constants.Link_Text_FieldName)]
+						string Link_Text  { get; set; }
+					
+					/// <summary>
 			/// The Link field.
 			/// <para></para>
 			/// <para>Field Type: General Link</para>		
@@ -375,6 +416,10 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 					
 			public static readonly Guid Image_FieldId = new Guid("bb038392-ce71-403c-b47c-2ae738173fa6");
 			public const string Image_FieldName = "Image";
+			
+					
+			public static readonly Guid Link_Text_FieldId = new Guid("e8c658db-a2ac-4c4e-aa30-469593507e2c");
+			public const string Link_Text_FieldName = "Link Text";
 			
 					
 			public static readonly Guid Link_FieldId = new Guid("04f8a871-2a18-4210-b2e5-daf0726f2565");
@@ -1612,6 +1657,47 @@ namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_W
 					
 			public static readonly Guid Include_In_Sitemap_FieldId = new Guid("576a1e27-ebaf-4541-a659-a2f25ff0770d");
 			public const string Include_In_Sitemap_FieldName = "Include In Sitemap";
+			
+			
+
+	}
+
+
+}
+namespace GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items
+{
+
+
+ 	/// <summary>
+	/// IGeneric_Callout_List Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Glass Mapper Walkthrough/Shared Content/Items/Generic Callout List</para>	
+	/// <para>ID: fc5626d5-9944-4c35-93d6-a209f2494f84</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IGeneric_Callout_List_Constants.TemplateIdString )] //, Cachable = true
+	public partial interface IGeneric_Callout_List : IGlassBase , global::GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items.IBase_Content
+	{
+			
+					/// <summary>
+			/// The Items field.
+			/// <para></para>
+			/// <para>Field Type: Treelist</para>		
+			/// <para>Field ID: 22fc3ad3-5358-450e-a5df-a63b1089136f</para>
+			/// <para>Custom Data: generic=GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items.IGeneric_Callout</para>
+			/// </summary>
+							[SitecoreField(FieldName="Items")]
+									IEnumerable<GlassMapperWalkthrough.Domain.Models.Sitecore_Templates.Glass_Mapper_Walkthrough.Shared_Content.Items.IGeneric_Callout> Items  { get; set; }
+				}
+
+	public static partial class IGeneric_Callout_List_Constants{
+
+			public const string TemplateIdString = "fc5626d5-9944-4c35-93d6-a209f2494f84";
+			public static readonly Guid TemplateId = new Guid(TemplateIdString);
+			public const string TemplateName = "Generic Callout List";
+
+					
+			public static readonly Guid Items_FieldId = new Guid("22fc3ad3-5358-450e-a5df-a63b1089136f");
+			public const string Items_FieldName = "Items";
 			
 			
 

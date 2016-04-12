@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {22C11FDA-DA53-48FA-BF55-35667CB72DC6}
+database: master
+path: /sitecore/content/Glass Mapper Walkthrough/Shared Content/Generic Callouts/Sailboats
+parent: {DF51F36A-9E0C-4A73-8A4F-47E2A96AC0FA}
+name: Sailboats
+master: {00000000-0000-0000-0000-000000000000}
+template: {454424E1-684D-4AD9-8F2A-8FF070E21EAB}
+templatekey: Generic Callout
+
+----version----
+language: en
+version: 1
+revision: 1a6bce9d-d66b-4dfe-821a-1e12ad28f497
+
+----field----
+field: {1D57731F-CC1B-4DC8-8A8E-557D9AEDEC6A}
+name: Headline
+key: headline
+content-length: 9
+
+Sailboats
+----field----
+field: {BB038392-CE71-403C-B47C-2AE738173FA6}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{380FB7DE-7C27-4310-A986-13DD754FAB8C}" />
+----field----
+field: {057FA8E7-CDB7-476A-82E2-594421B17BB4}
+name: Body Content
+key: body content
+content-length: 159
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+----field----
+field: {04F8A871-2A18-4210-B2E5-DAF0726F2565}
+name: Link
+key: link
+content-length: 123
+
+<link text="" linktype="internal" class="" title="" target="" querystring="" id="{6B95EA14-BD00-4218-8554-EA8F05F7631E}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160324T010303Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1a6bce9d-d66b-4dfe-821a-1e12ad28f497
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160324T010442Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

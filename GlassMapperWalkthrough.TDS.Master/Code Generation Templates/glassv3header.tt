@@ -32,6 +32,7 @@ using System.Text;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Fields;
+using Sitecore.Data.Items;
 using Sitecore.Globalization;
 
 <#
@@ -45,6 +46,9 @@ namespace <#=fullNamespace #>
 
 	public partial interface IGlassBase{
 		
+		[SitecoreItem]
+        Item SitecoreItem { get; set; }
+
 		[SitecoreId]
 		Guid Id{ get; set; }
 

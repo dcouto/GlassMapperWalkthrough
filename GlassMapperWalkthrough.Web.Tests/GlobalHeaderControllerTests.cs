@@ -26,18 +26,6 @@ namespace GlassMapperWalkthrough.Web.Tests
         }
 
         [TestMethod]
-        public void GlobalHeaderController_WhenIndexCalled_ReturnsGlobalHeaderView()
-        {
-            // ARRANGE
-
-            // ACT
-            var viewResult = _controller.Index() as ViewResult;
-
-            // ASSERT
-            Assert.AreEqual("~/Views/GlassMapperWalkthrough/Renderings/GlobalHeader.cshtml", viewResult.ViewName);
-        }
-
-        [TestMethod]
         public void GlobalHeaderController_WhenIndexCalled_ReturnsGlobalHeaderViewModel()
         {
             // ARRANGE
@@ -47,6 +35,18 @@ namespace GlassMapperWalkthrough.Web.Tests
 
             // ASSERT
             Assert.IsNotNull(viewModel);
+        }
+
+        [TestMethod]
+        public void GlobalHeaderController_WhenIndexCalled_ReturnsCorrectGlobalHeaderViewModel()
+        {
+            // ARRANGE
+
+            // ACT
+            var viewResult = _controller.Index() as ViewResult;
+
+            // ASSERT
+            Assert.AreEqual("~/Views/GlassMapperWalkthrough/Renderings/GlobalHeader.cshtml", viewResult.ViewName);
         }
 
         [TestMethod]
@@ -105,12 +105,11 @@ namespace GlassMapperWalkthrough.Web.Tests
             // setup above, it returns the datasourceItem setup above
             _sitecoreContext.GetItem<IHeader_Folder>(datasourceId).Returns(datasourceItem);
 
-            // mock the ISite interface and keep the "Default Header" field blank
+            // mock the ISite interface
             var site = Substitute.For<ISite>();
 
-            var defaultHeader = Substitute.For<IHeader_Folder>();
-
-            site.Default_Header.Returns(defaultHeader);
+            // set the site.Default_Header property to return the mock of IHeader_Folder
+            site.Default_Header.Returns(datasourceItem);
 
             // ACT
             var headerFolder = _controller.GetHeaderFolder(site);

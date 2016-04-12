@@ -80,8 +80,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\GlassMapperSc.cs" />
-    <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="Factories\UnityControllerFactory.cs" />
     <Compile Include="Initializers\UnityControllerFactoryInitializer.cs" />
     <Compile Include="IUnityWrapper.cs" />
@@ -90,10 +88,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
-    <None Include="App_Config\Include\Glass.Mapper.Sc.config" />
-    <None Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
-    <None Include="App_Config\Include\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
